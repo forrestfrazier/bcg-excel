@@ -84,66 +84,19 @@ div.k-grid-header {
     text-overflow: initial;
 }
 
-/*.k-grid td.date {
-    display: block;
-    min-width: 6em;
-}
 
-.k-grid td.status {
-    display: block;
-    min-width: 6em;
-}*/
-
-/*
-/* GRID 6.5
-.text-wrapper {
-    float: left;
-    width: 20%;
-}
-.text-wrapper span {
-    display: block;
-    line-height: 1.25;
-    padding-right: .5em;
-    text-align: right;
+/* Reoport 1 */
+.name.project {
+    color: #000;
+    font-weight: bold;
     }
-.bar-wrapper {
-    float: left;
-    width: 80%;
-}
-.k-grid .completed { color: #333;}
-.completed .bar-wrapper>div { background: #333;}
-.k-grid .on-track { color: green;}
-.on-track .bar-wrapper>div { background: green;}
-.k-grid .at-risk { color: #D8A514;}
-.at-risk .bar-wrapper>div { background: #D8A514;}
-.k-grid .off-track { color: #C05D4E;}
-.off-track .bar-wrapper>div { background: #C05D4E;}
 
-/* GRID 6.6
-.k-grid .project-number {
-    text-align: right;
-    padding-right: .75em;
-}
-.off-track-66, .at-risk-66, .total-66 {
-    text-align: center;
-}
-.project-66 { font-weight: bold }
-.sub-project-66 {
-    padding-left: 2em;
+.name.sub-project {
+    color: blue;
+    text-indent: 2em;
 }
 
-/* GRID 6.7
-.k-grid .target-progress-wrapper-67 {
-        position: relative;
-    }
-.k-grid .target-progress-67 {
-    background: pink;
-    height: 20px;
+.name.roadmap {
+    color: brown;
+    text-indent: 4em;
 }
-.k-grid .target-67 {
-    background: #000;
-    height: 20px;
-    position: absolute;
-    top: 1px;
-    width: 2px;
-}*/

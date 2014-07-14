@@ -1,15 +1,16 @@
 $(document).ready(function() {
 
     $("#grid").kendoGrid({
+        dataSource: {
+            data: data,
+        },
         columns: [{
             field: "name",
             title: "Name",
-            width: "200px"
-
-            /*attributes: {
-                "class": "table-cell",
-                style: "text-align: right; font-size: 14px"
-            }*/
+            width: "200px",
+            attributes: {
+                "class": "name",
+            }
         }, {
             field: "implementationStage",
             title: "Implementation Stage",
@@ -103,10 +104,16 @@ $(document).ready(function() {
             title: "Net Recurring Savings",
             hidden: true,
             width: "250px"
-        }, ],
-        dataSource: {
-            data: data,
-        },
+        }, {
+            field: "treeType",
+            title: "Net Recurring Savings",
+            hidden: true,
+            width: "0",
+            attributes: {
+                "class": "tree-type"
+            },
+        }],
+
         //pageSize: 30,
         scrollable: true,
         serverPaging: true,
@@ -120,4 +127,9 @@ $(document).ready(function() {
         //pageable: true,
     });
 
+    // apply the treeType to the numbers column for styling
+    $('.tree-type').each(function(i, td) {
+        var treeType = $(this).text();
+        $(this).prevAll('.name').addClass(treeType);
+    });
 });
