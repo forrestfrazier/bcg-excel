@@ -1,0 +1,149 @@
+/* apply a natural box layout model to all elements */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+.red {
+    background-color: #C05D4E;
+}
+
+.yellow {
+    background-color: #D8A514;
+}
+
+.green {
+    background-color: #20897C;
+}
+
+.blue {
+    background-color: #005995;
+}
+
+.blue-light {
+    background-color: #00B8E6;
+}
+
+.blue-vlight {
+    background-color: #AAE0F9;
+}
+
+.toolbar {
+    margin-bottom: 20px;
+}
+
+.k-grid td {
+    padding: 1px;
+    border-style: none;
+    line-height: 20px;
+    font-size: 10px;
+    font-weight: normal;
+    color: #5D6162;
+}
+
+/* Remove alternating row colors */
+.k-alt {
+    background-color: #FFFFFF;
+}
+
+.table-header1 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+}
+
+div.k-grid-header {
+    border-style: none;
+}
+
+.k-grid-header .k-header {
+    padding-left: 0;
+    border-style: none;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7F7F7F;
+}
+
+.k-grid-header .k-header > .k-link {
+    color: #7F7F7F;
+}
+
+.k-grouping-row td {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.k-grid-header .k-header>.k-link {
+    text-overflow: initial;
+}
+
+/*.k-grid td.date {
+    display: block;
+    min-width: 6em;
+}
+
+.k-grid td.status {
+    display: block;
+    min-width: 6em;
+}*/
+
+/*
+/* GRID 6.5
+.text-wrapper {
+    float: left;
+    width: 20%;
+}
+.text-wrapper span {
+    display: block;
+    line-height: 1.25;
+    padding-right: .5em;
+    text-align: right;
+    }
+.bar-wrapper {
+    float: left;
+    width: 80%;
+}
+.k-grid .completed { color: #333;}
+.completed .bar-wrapper>div { background: #333;}
+.k-grid .on-track { color: green;}
+.on-track .bar-wrapper>div { background: green;}
+.k-grid .at-risk { color: #D8A514;}
+.at-risk .bar-wrapper>div { background: #D8A514;}
+.k-grid .off-track { color: #C05D4E;}
+.off-track .bar-wrapper>div { background: #C05D4E;}
+
+/* GRID 6.6
+.k-grid .project-number {
+    text-align: right;
+    padding-right: .75em;
+}
+.off-track-66, .at-risk-66, .total-66 {
+    text-align: center;
+}
+.project-66 { font-weight: bold }
+.sub-project-66 {
+    padding-left: 2em;
+}
+
+/* GRID 6.7
+.k-grid .target-progress-wrapper-67 {
+        position: relative;
+    }
+.k-grid .target-progress-67 {
+    background: pink;
+    height: 20px;
+}
+.k-grid .target-67 {
+    background: #000;
+    height: 20px;
+    position: absolute;
+    top: 1px;
+    width: 2px;
+}*/
