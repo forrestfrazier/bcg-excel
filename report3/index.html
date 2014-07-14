@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bar Chart Using Kendo UI Grid</title>
+    <link href="../shared/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.dataviz.default.min.css" rel="stylesheet">
+    <link href="../shared/styles/normalize.css" rel="stylesheet">
+    <link href="../shared/styles/main.css" rel="stylesheet">
+    <script src="../shared/js/jquery.min.js"></script>
+    <script src="../shared/js/kendo.all.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="chart"></div>
+    <script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    text: "Impact Attributable Revenue Gains"
+                },
+                legend: {
+                    position: "right"
+                },
+                chartArea: {
+                    background: ""
+                },
+                seriesDefaults: {
+                    type: "line",
+                    style: "smooth"
+                },
+                series: [{
+                    name: "Actual",
+                    color: "#0000FF",
+                    markers: {
+                        type: "circle",
+                        background: "#0000FF"
+                    },
+                    data: [0, 0, 0, 0, 0, 0, 0, 0]
+                },{
+                    name: "Update",
+                    color: "#FF00FF",
+                    markers: {
+                        type: "square",
+                        background: "#FF00FF"
+                    },
+                    data: [0, 0, 0, 0, 0, 0, 0, 0]
+                },{
+                    name: "Plan",
+                    color: "#FFFF00",
+                    markers: {
+                        type: "triangle",
+                        background: "#FFFF00"
+                    },
+                    data: [0, 0, 0, 0, 0, 0, 0, 0]
+                }],
+                valueAxis: {
+                    max: 1.0,
+                    labels: {
+                        format: "{0}%"
+                    },
+                    majorTickType: "none"
+                },
+                categoryAxis: {
+                    categories: ["01/01/2012", "19/07/2012", "04/02/2013", "23/08/2013", "11/03/2014", "27/09/2014", "15/04/2015", "01/11/2015"],
+                    majorGridLines: {
+                        visible: false
+                    },
+                    title: {
+                        text: "Dates"
+                    }
+                },
+                tooltip: {
+                    visible: false, // Change to true for tooltips
+                    format: "{0}",
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+    </script>
+</body>
+</html>
