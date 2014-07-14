@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bar Chart Using Kendo UI Grid</title>
+    <link href="../shared/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.dataviz.min.css" rel="stylesheet">
+    <link href="../shared/styles/kendo.dataviz.default.min.css" rel="stylesheet">
+    <link href="../shared/styles/normalize.css" rel="stylesheet">
+    <link href="../shared/styles/main.css" rel="stylesheet">
+    <script src="../shared/js/jquery.min.js"></script>
+    <script src="../shared/js/kendo.all.min.js"></script>
+</head>
+<body>
+    <div id="example">
+    <div class="demo-section k-content">
+        <div id="chart"></div>
+    </div>
+    <script>
+        function createChart() {
+            $("#chart").kendoChart({
+                title: {
+                    text: "Currency: USD"
+                },
+                legend: {
+                    visible: true,
+                    position: "bottom"
+                },
+                seriesDefaults: {
+                    type: "bar",
+                    stack: {
+                        type: "100%"
+                    }
+                },
+                series: [{
+                    name: "Plan to Date",
+                    data: [0, 0, 0, 263430, 306, 0, 0, 0],
+                    color: "#4C4C4C"
+                }, {
+                    name: "Total Plan (Updated)",
+                    labels: {
+                        visible: true,
+                        position: "center",
+                        background: "transparent"
+                    },
+                    data: [0, 0, 0, 667630, -812, 0, 0, 0],
+                    color: "#B7B7B7"
+                }],
+                valueAxis: {
+                    line: {
+                        visible: true
+                    },
+                    minorGridLines: {
+                        visible: false
+                    },
+                    majorGridLines: {
+                        visible: false
+                    }
+                },
+                categoryAxis: {
+                    categories: ["Attributable Revenue Gains[+]", "Attributable Revenue Losses[-] ($000)", "Net Recurring Savings($000)", "Recurring Cost Savings[+] ($000)", "Recurring Costs Incurred[-] ($000)", "One Time Benefits[+] ($000)", "One Time Costs[-] ($000)", "Staff Transfer[-] (FTEs)"],
+                    majorGridLines: {
+                        visible: false
+                    },
+                    line: {
+                        visible: false
+                    }
+                },
+                tooltip: {
+                    visible: false, // true if you want tooltip
+                    template: "#= series.name #: #= value #"
+                }
+            });
+        }
+        $(document).ready(createChart);
+        $(document).bind("kendo:skinChange", createChart);
+    </script>
+</div>
+</body>
+</html>
