@@ -36,6 +36,11 @@
                 },
                 series: [{
                     name: "Plan to Date",
+                    labels: {
+                        visible: true,
+                        position: "center",
+                        background: "transparent"
+                    },
                     data: [0, 0, 0, 263430, 306, 0, 0, 0],
                     color: "#4C4C4C"
                 }, {
@@ -49,6 +54,8 @@
                     color: "#B7B7B7"
                 }],
                 valueAxis: {
+                    max: 1,
+                    min: -1,
                     line: {
                         visible: true
                     },
@@ -66,6 +73,9 @@
                     },
                     line: {
                         visible: false
+                    },
+                    position: {
+                        position: "left"
                     }
                 },
                 tooltip: {
