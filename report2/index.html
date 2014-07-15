@@ -29,7 +29,9 @@
                     visible: true
                 },
                 seriesDefaults: {
-                    stack: true
+                    stack: {
+                        type: "100%"
+                    }
                 },
                 series: [
                     { // REPLACED 0 WITH A NULLABLE INT
@@ -80,13 +82,12 @@
                     }
                 ],
                 valueAxis: {
-                    max: 25,
                     majorGridLines: {
                         visible: false
                     },
                     labels: {
                       visible: true,
-                      format: "{0}%"
+                      format: "{0:p0}"
                     },
                     minorGridLines: {
                         visible: false
