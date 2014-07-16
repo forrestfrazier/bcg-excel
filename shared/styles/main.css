@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot'); /* IE9 Compat Modes */
+  src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/icomoon.woff') format('woff'), /* Modern Browsers */
+       url('fonts/icomoon.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/icomoon.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 /* apply a natural box layout model to all elements */
 * {
     -webkit-box-sizing: border-box;
@@ -10,19 +19,19 @@ body {
 }
 
 .red {
-    background-color: #C05D4E;
+    color: #C05D4E;
 }
 
 .yellow {
-    background-color: #D8A514;
+    color: #D8A514;
 }
 
 .green {
-    background-color: #20897C;
+    color: #20897C;
 }
 
 .blue {
-    background-color: #005995;
+    color: #005995;
 }
 
 .blue-light {
@@ -103,4 +112,8 @@ div.k-grid-header {
 
 .icon-traffic-light:before {
     content: "\e600";
+}
+
+.status {
+    font-family: 'icomoon';
 }

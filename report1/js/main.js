@@ -138,9 +138,9 @@ $(document).ready(function() {
         var statusType = $(this).text();
         switch($(this).text())
         {
-            case "red": $(this).html("<span class=\"icon-traffic-light red\"></span>"); break;
-            case "yellow": $(this).html("<span class=\"icon-traffic-light yellow\"></span>"); break;
-            case "green": $(this).html("<span class=\"icon-traffic-light green\"></span>"); break;
+            case "red": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
+            case "yellow": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
+            case "green": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
         }
     });
 });
