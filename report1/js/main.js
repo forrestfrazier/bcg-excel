@@ -132,4 +132,10 @@ $(document).ready(function() {
         var treeType = $(this).text();
         $(this).prevAll('.name').addClass(treeType);
     });
+
+    // Status items need to be transformed into graphics
+    $('.status').each(function(i, td) {
+        var statusType = $(this).text();
+        $(this).css("background", statusType);
+    });
 });
