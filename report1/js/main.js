@@ -136,6 +136,11 @@ $(document).ready(function() {
     // Status items need to be transformed into graphics
     $('.status').each(function(i, td) {
         var statusType = $(this).text();
-        $(this).css("background", statusType);
+        switch($(this).text())
+        {
+            case "red": $(this).html("<span class=\"icon-traffic-light red\"></span>"); break;
+            case "yellow": $(this).html("<span class=\"icon-traffic-light yellow\"></span>"); break;
+            case "green": $(this).html("<span class=\"icon-traffic-light green\"></span>"); break;
+        }
     });
 });

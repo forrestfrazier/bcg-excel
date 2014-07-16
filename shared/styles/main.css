@@ -100,3 +100,7 @@ div.k-grid-header {
     color: brown;
     text-indent: 4em;
 }
+
+.icon-traffic-light:before {
+    content: "\e600";
+}
