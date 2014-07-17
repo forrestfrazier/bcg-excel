@@ -114,6 +114,22 @@ div.k-grid-header {
     content: "\e600";
 }
 
-.status {
+.icon-IM:before {
+    content: "\e601";
+}
+
+.icon-DICE:before {
+    content: "\e62d";
+}
+
+.MSstatus{
+    font-family: 'icomoon';
+}
+
+.DICEstatus{
+    font-family: 'icomoon';
+}
+
+.IMstatus {
     font-family: 'icomoon';
 }

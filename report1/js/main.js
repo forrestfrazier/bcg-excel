@@ -19,21 +19,21 @@ $(document).ready(function() {
             field: "statusMS",
             title: "Status MS",
             attributes: {
-                "class": "status"
+                "class": "MSstatus"
             },
             width: "110px"
         }, {
             field: "statusIM",
             title: "Status IM",
             attributes: {
-                "class": "status"
+                "class": "IMstatus"
             },
             width: "100px"
         }, {
             field: "statusDICE",
             title: "Status DICE",
             attributes: {
-                "class": "status"
+                "class": "DICEstatus"
             },
             width: "120px"
         }, {
@@ -134,13 +134,33 @@ $(document).ready(function() {
     });
 
     // Status items need to be transformed into graphics
-    $('.status').each(function(i, td) {
+    $('.MSstatus').each(function(i, td) {
         var statusType = $(this).text();
         switch($(this).text())
         {
             case "red": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
             case "yellow": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
             case "green": $(this).html("<span class=\"icon-traffic-light " + $(this).text() + "\"></span>"); break;
+        }
+    });
+
+    $('.IMstatus').each(function(i, td) {
+        var statusType = $(this).text();
+        switch($(this).text())
+        {
+            case "red": $(this).html("<span class=\"icon-IM " + $(this).text() + "\"></span>"); break;
+            case "yellow": $(this).html("<span class=\"icon-IM " + $(this).text() + "\"></span>"); break;
+            case "green": $(this).html("<span class=\"icon-IM " + $(this).text() + "\"></span>"); break;
+        }
+    });
+
+    $('.DICEstatus').each(function(i, td) {
+        var statusType = $(this).text();
+        switch($(this).text())
+        {
+            case "red": $(this).html("<span class=\"icon-DICE " + $(this).text() + "\"></span>"); break;
+            case "yellow": $(this).html("<span class=\"icon-DICE " + $(this).text() + "\"></span>"); break;
+            case "green": $(this).html("<span class=\"icon-DICE " + $(this).text() + "\"></span>"); break;
         }
     });
 });
